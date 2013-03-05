@@ -9,17 +9,16 @@
  * <http://www.gnu.org/licenses/lgpl.html>.
  *
  **/
-package org.codice.ddf.transform.ais;
+package org.codice.common.ais;
 
-import org.codice.ddf.transform.ais.message.*;
+import org.codice.common.ais.message.*;
+
 import org.junit.Test;
 
-import java.io.*;
+import java.io.IOException;
 import java.util.List;
 
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
 
 public class TestAISDecoder {

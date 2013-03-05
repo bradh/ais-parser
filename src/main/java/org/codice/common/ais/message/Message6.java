@@ -9,7 +9,7 @@
  * <http://www.gnu.org/licenses/lgpl.html>.
  *
  **/
-package org.codice.ddf.transform.ais.message;
+package org.codice.common.ais.message;
 
 import java.util.Arrays;
 

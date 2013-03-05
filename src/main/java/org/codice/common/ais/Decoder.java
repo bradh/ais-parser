@@ -9,17 +9,17 @@
  * <http://www.gnu.org/licenses/lgpl.html>.
  *
  **/
-package org.codice.ddf.transform.ais;
+package org.codice.common.ais;
 
-import org.codice.ddf.transform.ais.message.Message;
-import org.codice.ddf.transform.ais.message.UnknownMessageException;
+import org.codice.common.ais.message.Message;
+import org.codice.common.ais.message.UnknownMessageException;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
-class Decoder
+public class Decoder
 {
 
   /**
@@ -29,7 +29,7 @@ class Decoder
    * @throws IOException
    * @throws UnknownMessageException
    */
-  List<Message> parseString(String sentence) throws IOException, UnknownMessageException {
+  public List<Message> parseString(String sentence) throws IOException, UnknownMessageException {
     return parseInputStream(new ByteArrayInputStream(sentence.getBytes()));
   }
 
@@ -40,7 +40,7 @@ class Decoder
    * @throws IOException
    * @throws UnknownMessageException
    */
-  List<Message> parseInputStream(InputStream inputStream) throws IOException, UnknownMessageException {
+  public List<Message> parseInputStream(InputStream inputStream) throws IOException, UnknownMessageException {
     List<Message> messages = new ArrayList<Message>();
     List aisMessages = new ArrayList<String[]>();
     BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
