@@ -22,6 +22,8 @@ public abstract class Message {
   private long messageType;
   private long repeatIndicator;
   private long mmsi;
+  private double lon;
+  private double lat;
 
   public static Message parseMessage(List<Byte> bitList) throws UnknownMessageException {
     byte [] bitVector = ByteListTobyteArray(bitList);
@@ -305,5 +307,21 @@ public abstract class Message {
 
   public void setMmsi(long mmsi) {
     this.mmsi = mmsi;
+  }
+
+  public double getLon() {
+    return lon;
+  }
+
+  public void setLon(double lon) {
+    this.lon = lon;
+  }
+
+  public double getLat() {
+    return lat;
+  }
+
+  public void setLat(double lat) {
+    this.lat = lat;
   }
 }

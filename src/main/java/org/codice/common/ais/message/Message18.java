@@ -14,8 +14,6 @@ package org.codice.common.ais.message;
 
 public class Message18 extends Message {
   private double sog;
-  private double lon;
-  private double lat;
   private double cog;
   private long trueHeading;
   private long timestamp;
@@ -35,8 +33,8 @@ public class Message18 extends Message {
     setMmsi((int)bin2dec(bitVector, 8, 37));
     
     this.sog = bin2dec(bitVector,46, 55)/10.0;
-    this.lon = bin2dec(bitVector,57, 84, true)/600000.0;
-    this.lat = bin2dec(bitVector,85, 111, true)/600000.0;
+    setLon(bin2dec(bitVector,57, 84, true)/600000.0);
+    setLat(bin2dec(bitVector,85, 111, true)/600000.0);
     this.cog = bin2dec(bitVector,112, 123)/10.0;
     this.trueHeading = bin2dec(bitVector,124,132);
     this.timestamp = bin2dec(bitVector, 133,138);
@@ -56,22 +54,6 @@ public class Message18 extends Message {
 
   public void setSog(double sog) {
     this.sog = sog;
-  }
-
-  public double getLon() {
-    return lon;
-  }
-
-  public void setLon(double lon) {
-    this.lon = lon;
-  }
-
-  public double getLat() {
-    return lat;
-  }
-
-  public void setLat(double lat) {
-    this.lat = lat;
   }
 
   public double getCog() {

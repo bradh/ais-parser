@@ -18,8 +18,6 @@ public class Message1 extends Message {
   private double rot;
   private double sog;
   private boolean positionAccuracy;
-  private double lon;
-  private double lat;
   private double cog;
   private long trueHeading;
   private long timestamp;
@@ -79,22 +77,6 @@ public class Message1 extends Message {
 
   public void setPositionAccuracy(boolean positionAccuracy) {
     this.positionAccuracy = positionAccuracy;
-  }
-
-  public double getLon() {
-    return lon;
-  }
-
-  public void setLon(double lon) {
-    this.lon = lon;
-  }
-
-  public double getLat() {
-    return lat;
-  }
-
-  public void setLat(double lat) {
-    this.lat = lat;
   }
 
   public double getCog() {
