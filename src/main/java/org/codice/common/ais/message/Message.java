@@ -283,6 +283,9 @@ public abstract class Message {
     return result;
   }
 
+  public boolean hasLocationData(){
+    return false;
+  }
 
 
   public long getMessageType() {

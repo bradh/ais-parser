@@ -47,6 +47,11 @@ public class Message1 extends Message {
 
   }
 
+  @Override
+  public boolean hasLocationData(){
+    return true;
+  }
+
   public long getNavStatus() {
     return navStatus;
   }
