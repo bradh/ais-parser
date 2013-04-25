@@ -43,6 +43,11 @@ public class Message19 extends Message {
     this.width = bin2dec(bitVector, 289,294) + bin2dec(bitVector, 295, 300);
   }
 
+  @Override
+  public boolean hasLocationData() {
+    return true;
+  }
+
 
   public double getSog() {
     return sog;

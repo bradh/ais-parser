@@ -48,6 +48,11 @@ public class Message18 extends Message {
     this.radioStatus = bin2dec(bitVector, 148, 167);
   }
 
+  @Override
+  public boolean hasLocationData() {
+    return true;
+  }
+
   public double getSog() {
     return sog;
   }
