@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
     
     <properties>
-        <sonar.version>${project.version}</sonar.version>
+        <sonar.projectVersion>${project.version}</sonar.projectVersion>
     </properties>
 
     <scm>
