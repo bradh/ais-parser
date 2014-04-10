@@ -10,6 +10,7 @@
     
     <properties>
         <sonar.projectVersion>${project.version}</sonar.projectVersion>
+        <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
     </properties>
 
     <scm>
@@ -74,6 +75,16 @@
                     </execution>
 
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
             </plugin>
 
             <plugin>
